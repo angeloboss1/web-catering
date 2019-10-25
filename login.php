@@ -80,7 +80,7 @@
 	if($result->num_rows > 0){
 ?>
     <script type="text/javascript">
-window.location.href = 'http://www.google.com/';
+window.location.href = 'userhome.php';
 </script>
 <?php
 
