@@ -79,7 +79,7 @@
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
-
+          echo "i am in";
         	header("Location: userhome.php");
 
 	}
