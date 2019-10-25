@@ -80,7 +80,7 @@
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
 
-        	header("Location: userhome.php");
+        	echo 	$_SESSION["username"];
 
 	}
 	}
