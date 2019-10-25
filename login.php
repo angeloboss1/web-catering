@@ -58,7 +58,7 @@
 
 <br>
 <?php
-include 'header.php';
+
 	session_start();
 	$username = $_POST['username'];
 	$password = $_POST['psw'];
@@ -81,7 +81,7 @@ include 'header.php';
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
 
-        	header("Location: userhome.php")
+        	
 
 	}
 	}
