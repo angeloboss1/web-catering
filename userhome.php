@@ -3,7 +3,8 @@ session_start();
 $username = $_SESSION["username"];
  if (!isset(Susername))
    {
-     echo "this is the username: " . $username;
+     echo "this is the username: ";
+     echo $username;
    }
 ?>
 <!DOCTYPE html>
