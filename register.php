@@ -24,9 +24,9 @@
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-		
+
 		<ul class="nav navbar navbar-expand-md navbar-dark bg-dark ml-auto">
-		
+
 			<li class="nav-item dropdown">
 				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#" style="color: grey;"><i class="fa fa-user-o" ></i> Login</a>
 				<ul class="dropdown-menu">
@@ -39,13 +39,13 @@
                                 <input type="password" class="form-control" name="psw" style="width: 90%; margin-left:5%; margin-top:5%; margin-right:5%;" placeholder="Password" required>
                             </div>
                             <button type="submit" class="btn bg-dark btn-primary" style="margin-left:10px; margin-top: 10px; margin-right: 10px;">Login</button>
-                            
-                        </form>                       
+
+                        </form>
 					</li>
-			
-					
+
+
 				</ul>
-			
+
 			</li>
 			<li class="nav-item">
 			<a href="register.php" style="color: white;" ><i class="fa fa-user-o"></i> Register</a>
@@ -53,7 +53,7 @@
 		</ul>
 	</div>
         </div>
-    </div>    
+    </div>
 </nav>
 
 
@@ -68,7 +68,7 @@
 
                     <p class="lead"></p>
 
-                    
+
                     <form id="contact-form" method="POST" action="register.php" role="form">
 
     <div class="messages"></div>
@@ -106,7 +106,7 @@
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
-        </div>  
+        </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -122,18 +122,18 @@
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
-        </div>  
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <p class="text-muted">
                     <strong>*</strong> These fields are required</p>
                     <button type="submit" class="btn bg-dark btn-primary" style="margin-left:10px; margin-top: 10px; margin-right: 10px;">Register Now</button>
-                    
+
             </div>
         </div>
     </div>
 
-</form> 
+</form>
 
                 </div>
 
@@ -152,37 +152,37 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	$password = base64_encode($password);
-	
+
 	$message='Welcome to Bossventory ' . $firstname . '!';
-	
+
 	$subject = 'contact from web';
 
-	
+
 	if(mail($email,$subject,$message)) {
   		echo "<div class='alert alert-success'>
   <strong>Success!</strong> Email sent correctly.
 </div>";
 	} else {
-  	
+
 	}
 
-	$conn = new mysqli("localhost", "angelobo_a", "angeloboss12", "angelobo_logins");
+	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
 	$_SESSION["connection"] = $conn;
-	if ($conn->connect_error) { 
+	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
 	if($username===NULL){
 	}
 	else{
-	$sql= "INSERT INTO users (firstname, lastname, username, password, email) VALUES ('$firstname', '$lastname', '$username', '$password', '$email')";
+	$sql= "INSERT INTO users (username, password,firstname, lastname, email) VALUES ('$username', '$password','$firstname', '$lastname', '$email')";
 	$result = $conn->query($sql);
 	if($result->num_rows > 0){
-	
+
 	}
 	else{
 	}
 	}
-	
+
 	mysqli_close($conn);
 
 
