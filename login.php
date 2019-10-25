@@ -79,9 +79,7 @@
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
-          echo "i am in";
-        	header('Location: https://google.com');
-          exit;
+        	echo "<script type='text/javascript'> document.location = 'userhome.php'; </script>";
 	}
 	}
 	else{
