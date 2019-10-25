@@ -81,9 +81,10 @@
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
 
-        	
+
 
 	}
+  header("Location: index.html")
 	}
 	else{
 	echo "<div class='alert alert-danger' role='alert'>This is a danger alert—check it out!</div>";
