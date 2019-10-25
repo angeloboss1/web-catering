@@ -24,9 +24,9 @@
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-		
+
 		<ul class="nav navbar navbar-expand-md navbar-dark bg-dark ml-auto">
-		
+
 			<li class="nav-item dropdown">
 				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#" style="color: white;"><i class="fa fa-user-o" ></i> Login</a>
 				<ul class="dropdown-menu">
@@ -39,13 +39,13 @@
                                 <input type="password" class="form-control" name="psw" style="width: 90%; margin-left:5%; margin-top:5%; margin-right:5%;" placeholder="Password" required>
                             </div>
                             <button type="submit" class="btn bg-dark btn-primary" style="margin-left:10px; margin-top: 10px; margin-right: 10px;">Login</button>
-                            
-                        </form>                       
+
+                        </form>
 					</li>
-			
-					
+
+
 				</ul>
-			
+
 			</li>
 			<li class="nav-item">
 			<a href="register.php" style="color: grey;" ><i class="fa fa-user-o"></i> Register</a>
@@ -53,7 +53,7 @@
 		</ul>
 	</div>
         </div>
-    </div>    
+    </div>
 </nav>
 
 <br>
@@ -63,23 +63,23 @@
 	$password = $_POST['psw'];
 	$password = base64_encode($password);
 	$_SESSION["username"] = $username;
-	
-	
+
+
 	$username = stripcslashes($username);
 	$password = stripcslashes($password);
 
-	
-	$conn = new mysqli("localhost", "angelobo_a", "angeloboss12", "angelobo_logins");
+
+	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
 	$_SESSION["connection"] = $conn;
-	if ($conn->connect_error) { 
+	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
 	$sql= "SELECT * FROM users WHERE username = '$username' and password = '$password'";
 	$result = $conn->query($sql);
-	$row = $result->fetch_assoc(); 
+	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
-	
+
         	header("Location: userhome.php");
 
 	}
@@ -110,16 +110,16 @@
                     </div>
                     <br>
 
-                    
+
                 </div>
             </div>
         </div>
     </div>
-</section>        
-<?php                  
+</section>
+<?php
 }
 
-	
+
 	mysqli_close($conn);
 	?>
 </body>
