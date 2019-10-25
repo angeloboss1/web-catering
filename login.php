@@ -79,7 +79,8 @@
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
 
-        	echo "I am in";
+        	header("Location: https://www.google.com")
+
 
 
 	}
@@ -119,7 +120,7 @@
 }
 
 
-	mysqli_close($conn);
+
 	?>
 </body>
 </html>
