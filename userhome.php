@@ -1,8 +1,9 @@
 <?php
 session_start();
- if (!isset($_SESSION["username"]))
+$username = $_SESSION["username"];
+ if (!isset(Susername))
    {
-     header("location: index.html");
+     echo "this is the username: " . $username;
    }
 ?>
 <!DOCTYPE html>
