@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
                 <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="services.html" class="nav-item nav-link">Products</a>
+                <a href="services.html" class="nav-item nav-link">Services</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
@@ -58,20 +58,19 @@
 
 <br>
 <?php
-
+	session_start();
 	$username = $_POST['username'];
 	$password = $_POST['psw'];
 	$password = base64_encode($password);
+	$_SESSION["username"] = $username;
 
 
-
-
+	$username = stripcslashes($username);
 	$password = stripcslashes($password);
 
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
-
-
+	$_SESSION["connection"] = $conn;
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
@@ -80,9 +79,8 @@
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
-    session_start();
-    $_SESSION["username"] = $username;
-        	 header("location: userhome.php")
+
+        	header("Location: userhome.php");
 
 	}
 	}
