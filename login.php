@@ -79,7 +79,7 @@
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
 
-        	header("Location: https://www.google.com")
+        	header("Location: https://www.google.com");
 
 
 
