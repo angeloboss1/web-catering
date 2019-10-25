@@ -72,9 +72,10 @@ $result = mysql_query($sql);
   <?php while ($row = mysql_fetch_array($result))
      { ?>
 
-       
+
        <h2><?php echo $row['id_product']; ?></h2>
        <p>Book 10</p>
+       <?php}?>
 </div>
 
 <footer class="page-footer font-small bg-dark pt-4" style="bottom: 0; width: 100%; text-align: center;">
