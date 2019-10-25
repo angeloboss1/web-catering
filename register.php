@@ -174,7 +174,7 @@
 	if($username===NULL){
 	}
 	else{
-	$sql= "INSERT INTO users (username, password,firstname, lastname, email) VALUES ('$username', '$password','$firstname', '$lastname', '$email')";
+	$sql= "INSERT INTO users (username, password,first_name, last_name, email) VALUES ('$username', '$password','$firstname', '$lastname', '$email')";
 	$result = $conn->query($sql);
 	if($result->num_rows > 0){
 
