@@ -71,6 +71,7 @@
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
 	$_SESSION["connection"] = $conn;
+  $_SESSION["username"] = $username;
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
@@ -79,7 +80,7 @@
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
-          $_SESSION['username'] = $username;
+
         	echo "<script type='text/javascript'> document.location = 'userhome.php'; </script>";
 
 	}
