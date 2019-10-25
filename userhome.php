@@ -3,8 +3,7 @@ session_start();
 $username = $_SESSION["username"];
  if (!isset($username))
    {
-     echo "this is the username: ";
-     echo $username;
+     header("Location: index.html")
    }
 ?>
 <!DOCTYPE html>
