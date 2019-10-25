@@ -58,6 +58,7 @@
 
 <br>
 <?php
+include 'header.php';
 	session_start();
 	$username = $_POST['username'];
 	$password = $_POST['psw'];
@@ -80,7 +81,7 @@
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
 
-        	echo 	$_SESSION["username"];
+        	header("Location: userhome.php")
 
 	}
 	}
@@ -116,11 +117,6 @@
         </div>
     </div>
 </section>
-<?php
-}
 
-
-	mysqli_close($conn);
-	?>
 </body>
 </html>
