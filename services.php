@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+$sql= "SELECT * FROM catalogue;
+$result = mysql_query($sql);
+?>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -27,9 +34,9 @@
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-		
+
 		<ul class="nav navbar navbar-expand-md navbar-dark bg-dark ml-auto">
-		
+
 			<li class="nav-item dropdown">
 				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#" style="color: grey;"><i class="fa fa-user-o" ></i> Login</a>
 				<ul class="dropdown-menu">
@@ -42,13 +49,13 @@
                                 <input type="password" class="form-control" name="psw" style="width: 90%; margin-left:5%; margin-top:5%; margin-right:5%;" placeholder="Password" required>
                             </div>
                             <button type="submit" class="btn bg-dark btn-primary" style="margin-left:10px; margin-top: 10px; margin-right: 10px;">Login</button>
-                             
-                        </form>                       
+
+                        </form>
 					</li>
-			
-					
+
+
 				</ul>
-			
+
 			</li>
 			<li class="nav-item">
 			<a href="register.php" style="color: grey;"><i class="fa fa-user-o"></i> Register</a>
@@ -56,47 +63,18 @@
 		</ul>
 	</div>
         </div>
-    </div>    
+    </div>
 </nav>
 
+<div class="productinfo text-center">
 
 
-<div class="jumbotron" style="background-image: url('/image/Inventory-Control.png'); height: 200px;">
-  <div class="container text-center">
-    <h1> </h1>      
-    <p></p>
-  </div>
-</div>
-  
-<div class="container-fluid bg-3 text-center">    
-  <h1>Our Features</h1><br><br>
-  <div class="row">
-    <div class="col-sm-4" >
-	<h4>Out of Stock Tracker</h4><br>
-      <img src="/image/OutOfStock.jpg" class="img-responsive" style="width:100%; height: 60%;" alt="Image">
-      <p>This funtionality allow the user to see how many and which items are out of stock.
-      </p>
-      <hr>
-    </div>
-    
-    <div class="col-sm-4"> 
-      	<h4>Low Stock Tracker</h4><br>
-      <img src="/image/LowStock.jpg" class="img-responsive" style="width:100%; max-height: 60%;" alt="Image">
-      <p>This funtionality allow the user to see how many and which items are low stock. the user can also set the level of low stock for each item.
-      </p>
-      <hr>
-      <br><br>
-    </div>
-    
-    
-    <div class="col-sm-4"> 
-      <h4>Inventory Tracker</h4><br>
-      <img src="/image/inventory.png"  class="img-responsive" style="width:100%; height: 60%;" alt="Image">
-      <p>This funtionality allow the user to see how many and which items are in stock, search, add and delete an item.
-      </p>
-      <hr>
-    </div>
-  </div>
+  <?php while ($row = mysql_fetch_array($result))
+     { ?>
+
+       //<img src="images/home/" alt="" />
+       <h2><?php echo $row['id_product']; ?></h2>
+       <p>Book 10</p>
 </div>
 
 <footer class="page-footer font-small bg-dark pt-4" style="bottom: 0; width: 100%; text-align: center;">
