@@ -78,9 +78,11 @@
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
-
-        	header("Location: https://www.google.com");
-
+?>
+    <script type="text/javascript">
+window.location.href = 'http://www.google.com/';
+</script>
+<?php
 
 
 	}
