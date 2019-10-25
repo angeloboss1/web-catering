@@ -79,7 +79,7 @@ $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 if($result->num_rows > 0){
 $_SESSION["username"] = $username;
-header("Location: userhome.php")
+header("Location: userhome.php");
 exit();
 	}
 	else{
