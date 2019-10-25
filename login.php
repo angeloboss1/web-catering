@@ -65,7 +65,7 @@
 
 
 
-	$username = stripcslashes($username);
+
 	$password = stripcslashes($password);
 
 
@@ -79,7 +79,7 @@
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
-          $_SESSION["username"] = $username;
+          $_SESSION['username'] = $username;
         	echo "<script type='text/javascript'> document.location = 'userhome.php'; </script>";
 
 	}
