@@ -62,7 +62,7 @@
 	$username = $_POST['username'];
 	$password = $_POST['psw'];
 	$password = base64_encode($password);
-
+  $_SESSION["username"] = $username;
 
 
 
@@ -71,7 +71,7 @@
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
 	$_SESSION["connection"] = $conn;
-  $_SESSION["username"] = $username;
+
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
@@ -80,8 +80,8 @@
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
-          
-        	echo "<script type='text/javascript'> document.location = 'userhome.php'; </script>";
+
+        	echo $username;
 
 	}
 	}
