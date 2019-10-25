@@ -1,3 +1,5 @@
+<?php
+session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,8 +59,7 @@
 </nav>
 
 <br>
-<?php
-session_start();
+
 $username = $_POST['username'];
 $password = $_POST['psw'];
 $password = base64_encode($password);
