@@ -86,7 +86,7 @@ exit();
 	else{
 	echo "<div class='alert alert-danger' role='alert'>This is a danger alert—check it out!</div>";
 
-		?>
+
 <br>
 <section id="cover">
     <div id="cover-caption">
@@ -115,11 +115,9 @@ exit();
         </div>
     </div>
 </section>
-<?php
 }
 
 
-
-	?>
 </body>
 </html>
+?>
