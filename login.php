@@ -83,8 +83,9 @@
 window.location.href = 'userhome.php';
 </script>
 <?php
-
-
+session_start();
+$_SESSION["username"] = $username;
+exit;
 	}
 	else{
 	echo "<div class='alert alert-danger' role='alert'>This is a danger alert—check it out!</div>";
