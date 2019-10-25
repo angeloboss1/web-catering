@@ -1,5 +1,6 @@
 <?php
 session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +60,7 @@ session_start();
 </nav>
 
 <br>
-
+<?php
 $username = $_POST['username'];
 $password = $_POST['psw'];
 $password = base64_encode($password);
@@ -86,7 +87,7 @@ exit();
 	else{
 	echo "<div class='alert alert-danger' role='alert'>This is a danger alert—check it out!</div>";
 
-
+?>
 <br>
 <section id="cover">
     <div id="cover-caption">
@@ -115,6 +116,7 @@ exit();
         </div>
     </div>
 </section>
+<?php
 }
 
 
