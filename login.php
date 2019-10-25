@@ -79,11 +79,8 @@
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
-	if($row["username"]==$username && $row["password"] == $password){
 
-header("Location: https://catering-web.com/index.html");
-
-	}
+    header("Location: https://catering-web.com/index.html");
 
 	}
 	else{
