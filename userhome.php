@@ -1,7 +1,7 @@
 <?php
 session_start();
 $username = $_SESSION["username"];
- if (!isset(Susername))
+ if (!isset($username))
    {
      echo "this is the username: ";
      echo $username;
