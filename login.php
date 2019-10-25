@@ -62,7 +62,7 @@
 	$username = $_POST['username'];
 	$password = $_POST['psw'];
 	$password = base64_encode($password);
-	$_SESSION["username"] = $username;
+
 
 
 	$username = stripcslashes($username);
@@ -79,6 +79,7 @@
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
+          $_SESSION["username"] = $username;
         	echo "<script type='text/javascript'> document.location = 'userhome.php'; </script>";
 
 	}
