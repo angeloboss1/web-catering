@@ -94,7 +94,7 @@ session_start();
       	<?php
 		$conn = new mysqli("localhost", "angelobo_a", "angeloboss12", "angelobo_logins");
 		$_SESSION["connection"] = $conn;
-		$username = $_SESSION["username"] ;
+		//$username = $_SESSION["username"] ;
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		}
