@@ -81,7 +81,7 @@
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
 
-        	echo "<script type='text/javascript'> document.location = 'userhome.php'; </script>";
+        	 header("location: userhome.php")
 
 	}
 	}

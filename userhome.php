@@ -2,8 +2,8 @@
 session_start();
  if (!isset($_SESSION["username"]))
    {
-      
-      echo $_SESSION["connection"];
+
+     header("location: index.html")
    }
 ?>
 <!DOCTYPE html>
