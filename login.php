@@ -79,8 +79,8 @@
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
 	if($row["username"]==$username && $row["password"] == $password){
-        	header("location: https://www.catering-web.com/contact.php");
-          exit;
+        	header('location: https://www.catering-web.com/contact.php');
+          
 	}
 	}
 	else{
