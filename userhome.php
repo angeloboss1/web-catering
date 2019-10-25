@@ -2,7 +2,7 @@
 session_start();
  if (!isset($_SESSION["username"]))
    {
-      echo "hello";
+      echo $_SESSION["username"];
    }
 ?>
 <!DOCTYPE html>
