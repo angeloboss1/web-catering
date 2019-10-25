@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>SDA Catering</title>
+<title>Bossventory</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,13 +13,13 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
     <div class="container-fluid">
-        <a href="#" class="navbar-brand mr-3">SDA Catering</a>
+        <a href="#" class="navbar-brand mr-3">Bossventory</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="https://www.angelobossini.com" class="nav-item nav-link">Home</a>
                 <a href="services.html" class="nav-item nav-link">Services</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
@@ -58,7 +58,6 @@
 
 <br>
 <?php
-
 	session_start();
 	$username = $_POST['username'];
 	$password = $_POST['psw'];
@@ -79,9 +78,11 @@
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	if($result->num_rows > 0){
+	if($row["username"]==$username && $row["password"] == $password){
 
-    header("Location: https://catering-web.com/index.html");
+        	header("Location: userhome.php");
 
+	}
 	}
 	else{
 	echo "<div class='alert alert-danger' role='alert'>This is a danger alert—check it out!</div>";
@@ -93,7 +94,7 @@
         <div id="container" class="container">
             <div class="row">
                 <div class="col-sm-6 offset-sm-3 text-center">
-                    <h1 class="display-4">Login to SDA Catering</h1><br><br>
+                    <h1 class="display-4">Login to Bossventory</h1><br><br>
                     <div class="info-form">
                         <form action="login.php" class="form-inlin justify-content-center" method="POST">
                             <div class="form-group">
@@ -115,6 +116,11 @@
         </div>
     </div>
 </section>
+<?php
+}
 
+
+	mysqli_close($conn);
+	?>
 </body>
 </html>
