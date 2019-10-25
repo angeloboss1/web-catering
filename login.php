@@ -79,11 +79,7 @@ $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 if($result->num_rows > 0){
 $_SESSION["username"] = $username;
-?>
-    <script type="text/javascript">
-window.location.href = 'userhome.php';
-</script>
-<?php
+header("Location: userhome.php")
 exit();
 	}
 	else{
