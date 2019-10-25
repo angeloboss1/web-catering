@@ -72,7 +72,7 @@ $result = mysql_query($sql);
   <?php while ($row = mysql_fetch_array($result))
      { ?>
 
-       //<img src="images/home/" alt="" />
+       
        <h2><?php echo $row['id_product']; ?></h2>
        <p>Book 10</p>
 </div>
