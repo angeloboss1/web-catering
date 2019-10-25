@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bossventory</title>
+<title>SDA Catering</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,20 +13,20 @@
     <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
     <div class="container-fluid">
-        <a href="#" class="navbar-brand mr-3">Bossventory</a>
+        <a href="#" class="navbar-brand mr-3">SDA Catering</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="https://www.angelobossini.com" class="nav-item nav-link">Home</a>
-                <a href="services.html" class="nav-item nav-link">Services</a>
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="services.html" class="nav-item nav-link">Products</a>
                 <a href="contact.php" class="nav-item nav-link active">Contact</a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-		
+
 		<ul class="nav navbar navbar-expand-md navbar-dark bg-dark ml-auto">
-		
+
 			<li class="nav-item dropdown">
 				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#" style="color: grey;"><i class="fa fa-user-o" ></i> Login</a>
 				<ul class="dropdown-menu">
@@ -39,13 +39,13 @@
                                 <input type="password" class="form-control" name="psw" style="width: 90%; margin-left:5%; margin-top:5%; margin-right:5%;" placeholder="Password" required>
                             </div>
                             <button type="submit" class="btn bg-dark btn-primary" style="margin-left:10px; margin-top: 10px; margin-right: 10px;">Login</button>
-                            
-                        </form>                       
+
+                        </form>
 					</li>
-			
-					
+
+
 				</ul>
-			
+
 			</li>
 			<li class="nav-item">
 			<a href="register.php" style="color: grey;"><i class="fa fa-user-o"></i> Register</a>
@@ -53,7 +53,7 @@
 		</ul>
 	</div>
         </div>
-    </div>    
+    </div>
 </nav>
         <div class="container">
 
@@ -65,7 +65,7 @@
 
                     <p class="lead"></p>
 
-                    
+
                     <form id="contact-form" method="POST" action="contact.php" role="form">
 
     <div class="messages"></div>
@@ -130,15 +130,12 @@
         </div>
     </div>
 
-</form> 
+</form>
 
                 </div>
-                
+
 
             </div>
-<div id="amzn-assoc-ad-aee1ed11-5e24-4c2a-804b-add972e09093"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=aee1ed11-5e24-4c2a-804b-add972e09093"></script>
-        </div>
-
 
 <?php
 
@@ -149,22 +146,22 @@
 	$email = $_POST['email'];
 	$need = $_POST['form_need'];
 	$message = $_POST['message'];
-	
-	
-	$subject = 'Contact from angelobossini.com';
 
-	
+
+	$subject = 'Contact from SDA Catering';
+
+
 	if(mail($email,$subject,$message)) {
   		echo "<div class='alert alert-success'>
   <strong>Success!</strong> Email sent correctly!
 </div>";
 	} else {
-  	
+
 	}
 
 
 
-	
+
 	mysqli_close($conn);
 ?>
  </body>
