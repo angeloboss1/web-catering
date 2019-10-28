@@ -118,7 +118,6 @@ $_SESSION["connection"] = $conn;
 	}
 	else{
     if (is_dir($path)){
-    move_uploaded_file($_FILES["product_image"]["tmp_name"], $target_file);
     move_uploaded_file($_FILES['product_image'],$path);
    }
   }
