@@ -120,8 +120,7 @@ $_SESSION["connection"] = $conn;
     if (is_dir($path)){
     move_uploaded_file($_FILES['product_image'],$path);
    }
-  }
-    }
+
   else{
     mkdir($path);
     move_uploaded_file($_FILES['product_image'],$path);
