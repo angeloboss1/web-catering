@@ -7,6 +7,6 @@ $sql= "SELECT * FROM catalogue";
 $result = mysql_query($sql);
 while ($row = mysql_fetch_array($result))
 {
- echo $row['Book_Name'];
+ echo $row[];
 }
 ?>
