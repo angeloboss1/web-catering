@@ -108,8 +108,8 @@ $_SESSION["connection"] = $conn;
 	$quantity = stripcslashes($quantity);
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
- $path = "Pictures/" . $username . "/";
- mkdir($path);
+  $path = "Pictures/" . $username . "/";
+
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
@@ -117,6 +117,13 @@ $_SESSION["connection"] = $conn;
 	if($sku===''){
 	}
 	else{
+    if (is_dir($path)){
+    move_uploaded_file($_FILES['product_image'],$path);
+    }
+  else{
+    mkdir($path);
+    move_uploaded_file($_FILES['product_image'],$path);
+  }
 
 	if ($conn->query($sql) === TRUE) {
 	echo "<div class='alert alert-success' role='alert'>You item is now added to the inventory.</div>";
