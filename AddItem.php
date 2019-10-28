@@ -108,7 +108,7 @@ $_SESSION["connection"] = $conn;
 	$quantity = stripcslashes($quantity);
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
- $path = "/Pictures/" . $username . "/";
+ $path = "public_html/Pictures" . $username . "/";
  mkdir($path);
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
