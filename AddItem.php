@@ -77,7 +77,7 @@ $_SESSION["connection"] = $conn;
       				<label>Quantity</label><br>
       				<input type="number" placeholder="Quantity"  class="form-control" name="Quantity" required><br>
       				<label>Product Image</label><br>
-              <input type="file" name="fileToUpload" id="fileToUpload" name="product_image">
+              <input type="file" name="fileToUpload"  name="product_image">
       				<br><br><br>
       				<button type="submit" id="btn" class="btn btn-primary bg-dark btn-raised" value="Add Item">Add Item</button><br>
                         </form>
@@ -118,7 +118,24 @@ $_SESSION["connection"] = $conn;
 	}
 	else{
     if (is_dir($path)){
-    move_uploaded_file($_FILES['product_image'],$path);
+      if (($_FILES['product_image']['name']!="")){
+  // Where the file is going to be stored
+   $target_dir = $path;
+   $file = $_FILES['product_image']['name'];
+   $paths = pathinfo($file);
+   $filename = $paths['filename'];
+   $ext = $paths['extension'];
+   $temp_name = $_FILES['my_file']['tmp_name'];
+   $path_filename_ext = $target_dir.$filename.".".$ext;
+
+  // Check if file already exists
+  if (file_exists($path_filename_ext)) {
+   echo "Sorry, file already exists.";
+   }else{
+   move_uploaded_file($temp_name,$path_filename_ext);
+   echo "Congratulations! File Uploaded Successfully.";
+   }
+  }
     }
   else{
     mkdir($path);
