@@ -113,7 +113,7 @@ $_SESSION["connection"] = $conn;
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
-	$sql= "INSERT INTO catalogue (id_product, Product_name, Product_desc, Quantity,Product_image_path) VALUES ('$sku','$productname','$productdesc','$quantity','$image_dir')";
+	$sql= "INSERT INTO catalogue (id_product, Product_name, Product_desc, Quantity) VALUES ('$sku','$productname','$productdesc','$quantity')";
 	if($sku===''){
 	}
 	else{
