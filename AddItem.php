@@ -77,7 +77,8 @@ $_SESSION["connection"] = $conn;
       				<label>Quantity</label><br>
       				<input type="number" placeholder="Quantity"  class="form-control" name="Quantity" required><br>
       				<label>Low Stock Quantity Alert Default</label><br>
-      				<input type="number" placeholder="Low Stock Quantity Alert"  class="form-control" name="LowstockQuantity" required><br>
+              <input type="file" name="fileToUpload" id="fileToUpload" name="product_image">
+      				<br>
       				<button type="submit" id="btn" class="btn btn-primary bg-dark btn-raised" value="Add Item">Add Item</button><br>
                         </form>
                     </div>
