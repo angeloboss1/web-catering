@@ -109,6 +109,12 @@ $_SESSION["connection"] = $conn;
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
  $path = "/Pictures/" . $username;
+ if(file_exists($path)){
+echo $path;
+ }
+else{
+ mkdir($path);
+}
 
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
@@ -117,12 +123,7 @@ $_SESSION["connection"] = $conn;
 	if($sku===''){
 	}
 	else{
-    if(file_exists($path)){
 
-    }
-  else{
-    mkdir($path);
-  }
 	if ($conn->query($sql) === TRUE) {
 	echo "<div class='alert alert-success' role='alert'>You item is now added to the inventory.</div>";
 
