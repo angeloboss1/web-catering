@@ -35,14 +35,14 @@ $_SESSION["connection"] = $conn;
 			<a class="dropdown-item" href="yourinventory.php" style="color:gray;">All Inventory</a>
 			<a class="dropdown-item" href="outofstock.php" style="color:gray;">Out of Stock</a>
 			<a class="dropdown-item" href="lowstock.php" style="color:gray;">Low Stock</a>
-			
-		</div>			
+
+		</div>
 		</div>
                 <a href="AddItem.php" class="nav-item nav-link active">Add Item</a>
                 <a href="Search.php" class="nav-item nav-link">Search Item</a>
-            </div>	
+            </div>
            <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-		
+
 		<ul class="nav navbar navbar-expand-md navbar-dark bg-dark ml-auto">
 			<li class="nav-item">
 			<a class="nav-link" href="#" style="color: grey;"><i class="fa fa-user-o" ></i><?php session_start(); echo " ". $_SESSION["username"]?></a>
@@ -54,8 +54,8 @@ $_SESSION["connection"] = $conn;
 		</ul>
 	</div>
         </div>
-    </div>    
-        
+    </div>
+
 </nav>
 
 
@@ -83,7 +83,7 @@ $_SESSION["connection"] = $conn;
                     </div>
                     <br>
 
-                    
+
                 </div>
             </div>
         </div>
@@ -100,19 +100,19 @@ $_SESSION["connection"] = $conn;
 	$quantity = $_POST['Quantity'];
 	$username = $_SESSION["username"] ;
 	$lowstockquantity = $_POST["LowstockQuantity"] ;
-	
+
 	$sku = stripcslashes($sku);
 	$productname = stripcslashes($productname);
 	$productdesc = stripcslashes($productdesc);
 	$quantity = stripcslashes($quantity);
 
-	$conn = new mysqli("localhost", "angelobo_a", "angeloboss12", "angelobo_logins");
+	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
 
-	
-	if ($conn->connect_error) { 
+
+	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
-	$sql= "INSERT INTO inventory (sku, Product_name, Product_desc, Quantity, username, lowstockfrom) VALUES ('$sku','$productname','$productdesc','$quantity', '$username', '$lowstockquantity')";
+	$sql= "INSERT INTO inventory (sku, Product_name, Product_desc, Quantity) VALUES ('$sku','$productname','$productdesc','$quantity')";
 	if($sku===''){
 	}
 	else{
