@@ -50,7 +50,7 @@ $username = $_SESSION["username"];
 
 		<ul class="nav navbar navbar-expand-md navbar-dark bg-dark ml-auto">
 			<li class="nav-item">
-			<a class="nav-link" href="#" style="color: grey;"><i class="fa fa-user-o" ></i><?php session_start(); echo " ". $_SESSION["username"]?></a>
+			<a class="nav-link" href="#" style="color: grey;"><i class="fa fa-user-o" ></i><?php echo " ". $_SESSION["username"]?></a>
 			</li>
 
 			<li class="nav-item">
