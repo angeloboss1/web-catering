@@ -66,7 +66,7 @@ $_SESSION["connection"] = $conn;
                 <div class="col-sm-6 offset-sm-3 text-center">
                     <h1 class="display-4">Add a new Item in your Inventory</h1><br><br>
                     <div class="form-group">
-                        <form action="AddItem.php" method="POST" style=" text-align: center;">
+                        <form action="AddItem.php" method="POST" style=" text-align: center;"  enctype="multipart/form-data">
                             <div class="form-group">
                           	<label>SKU</label><br>
     				<input type="text" id="sku" name="sku" class="form-control" placeholder="EX: 123" required><br>
@@ -76,9 +76,9 @@ $_SESSION["connection"] = $conn;
       				<textarea type="text" placeholder="Product Description" class="form-control" name="ProductDesc" required></textarea><br>
       				<label>Quantity</label><br>
       				<input type="number" placeholder="Quantity"  class="form-control" name="Quantity" required><br>
-      				<label>Low Stock Quantity Alert Default</label><br>
+      				<label>Product Image</label><br>
               <input type="file" name="fileToUpload" id="fileToUpload" name="product_image">
-      				<br>
+      				<br><br><br>
       				<button type="submit" id="btn" class="btn btn-primary bg-dark btn-raised" value="Add Item">Add Item</button><br>
                         </form>
                     </div>
