@@ -112,7 +112,7 @@ $_SESSION["connection"] = $conn;
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
-	$sql= "INSERT INTO inventory (sku, Product_name, Product_desc, Quantity) VALUES ('$sku','$productname','$productdesc','$quantity')";
+	$sql= "INSERT INTO catalogue (sku, Product_name, Product_desc, Quantity) VALUES ('$sku','$productname','$productdesc','$quantity')";
 	if($sku===''){
 	}
 	else{
