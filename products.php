@@ -98,7 +98,7 @@
         echo "<p align='center'>" . $row['Product_Desc'] . "</p></div>";
         ++$counter;
     }
-    echo "</div>"
+    echo "</div>";
 } else {
     echo "0 results";
 }
