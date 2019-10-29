@@ -87,12 +87,18 @@
 </div>
 
 <?php
+    $counter = 0;
+    echo '<div class="row">';
     while($row = $result->fetch_assoc()) {
-
+      if($counter != 0 && $counter % 3 == 0){
+            echo '</div><div class="row">';
+          }
         echo "<div class='col-sm-4 img-portfolio'><h3 align='center'>" . $row['Product_Name'] . "</h3>";
         echo "<center><img src='" . $row['Image_path'] . "' width='300px' height='250px'></center>";
         echo "<p align='center'>" . $row['Product_Desc'] . "</p></div>";
+        ++$counter;
     }
+    echo "</div>"
 } else {
     echo "0 results";
 }
