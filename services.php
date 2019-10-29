@@ -87,19 +87,12 @@ $username = $_SESSION["username"] ;
 	?>
 </div>
 
-
-					<table id="table"  class="table table-sm table-striped" style="width:90%; text-align:center;" align="center">
-
-					      <th>SKU</th>
-
-					    </tr>
-					  </thead>
-					  <tbody>
 <?php
     while($row = $result->fetch_assoc()) {
 
-        echo "<tr> <td>" . $row['id_product'] . "</td></tr>";
-        echo "<tr> <td> <img src='" . $row['Image_path'] . "'></td></tr>";
+        echo "<h2>" . $row['Product_Name'] . "</h3>";
+        echo "<img src='" . $row['Image_path'] . "'>";
+        echo "<p>" . $row['Product_Desc'] . "</p>";
     }
 } else {
     echo "0 results";
