@@ -25,8 +25,8 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
               <div class="navbar-nav">
-                  <a href="index.html" class="nav-item nav-link active">Home</a>
-                  <a href="products.php" class="nav-item nav-link">Products</a>
+                  <a href="index.html" class="nav-item nav-link">Home</a>
+                  <a href="products.php" class="nav-item nav-link active">Products</a>
                   <a href="contact.php" class="nav-item nav-link">Contact</a>
               </div>
               <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
