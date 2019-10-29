@@ -80,7 +80,7 @@ $username = $_SESSION["username"];
 </div>
 </div>
 
-<footer class="page-footer font-small bg-dark pt-4" style="bottom: 0; width: 100%; text-align: center;">
+ <footer class="page-footer font-small bg-dark pt-4" style="position:absolute;bottom: 0; width: 100%; text-align: center;">
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3" style="color:white;">© 2019 Copyright: Angelo Bossini, Sandiya Venkatesh, Damaris Zola</div>
   <!-- Copyright -->
