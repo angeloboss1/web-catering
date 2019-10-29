@@ -76,7 +76,7 @@ $(function () {
 
         <div class="col-lg-6">
             <h3>Search in your Inventory</h3>
-            <input type="search" id="search" value="" class="form-control" placeholder="Search in your inventory (Fuzzy)">
+            <input type="search" id="search" value="" class="form-control" placeholder="Search in your inventory">
             <br><br>
         </div>
    <br><br>
