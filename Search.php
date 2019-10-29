@@ -100,11 +100,11 @@ session_start();
 
 	$sku = $_POST["sku"];
 	$username = $_SESSION["username"] ;
-	$conn1 = new mysqli("localhost", "angelobo_a", "angeloboss12", "angelobo_logins");
+$conn1 = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
 	if ($conn1->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
+	die("Connection failed: " . $conn1->connect_error);
 	}
-	$query= "DELETE FROM inventory WHERE username = '$username' AND sku = '$sku'";
+	$query= "DELETE FROM catalogue WHERE id_product = '$sku'";
 	if($sku===NULL){
 
 	}
