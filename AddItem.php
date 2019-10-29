@@ -121,7 +121,7 @@ $new_file_name = strtolower($_FILES['photo']['tmp_name']);
     if (is_dir($path)){
       $target_dir = "Pictures/" . $username . "/" . $new_file_name ;
 echo "hello" . $_FILES["fileToUpload"]['name'];
-copy($filename, $target_dir);
+move_uploaded_file($filename, $target_dir);
 
   }
 
