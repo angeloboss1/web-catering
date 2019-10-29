@@ -96,7 +96,8 @@
         echo "<div class='col-sm-4 img-portfolio'><h3 align='center'>" . $row['Product_Name'] . "</h3>";
         echo "<center><img src='" . $row['Image_path'] . "' width='300px' height='250px'></center>";
         echo "<p align='center'>" . $row['Product_Desc'] . "</p>";
-        echo "<center><button type='button'>Add to cart</button></center></div><br>";
+        echo "<center><button type='button'>Add to cart</button></center><br><br>";
+        echo "</div>";
         ++$counter;
     }
     echo "</div>";
