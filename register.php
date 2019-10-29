@@ -153,7 +153,7 @@
 	$password = $_POST['password'];
 	$password = base64_encode($password);
 
-	$message='Welcome to Bossventory ' . $firstname . '!';
+	$message='Welcome to SDA Catering ' . $firstname . '!';
 
 	$subject = 'contact from web';
 
