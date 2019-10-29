@@ -77,7 +77,8 @@ $username = $_SESSION["username"];
   <h1>Welcome to SDA Catering  </h1><br><br>
   <div class="row">
     <div class="col-sm-4" >
-
+</div>
+</div>
 
 <footer class="page-footer font-small bg-dark pt-4" style="bottom: 0; width: 100%; text-align: center;">
   <!-- Copyright -->
