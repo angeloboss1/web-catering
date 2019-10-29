@@ -120,7 +120,7 @@ $_SESSION["connection"] = $conn;
     if (is_dir($path)){
       $target_dir = "Pictures/" . $username . "/" . $_FILES["fileToUpload"] ;
 echo "hello" . $_FILES["fileToUpload"]['name'];
-copy($_FILES["fileToUpload"], $target_dir);
+copy($_FILES["fileToUpload"]['name'], $target_dir);
 
   }
 
