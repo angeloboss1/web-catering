@@ -109,7 +109,7 @@ $_SESSION["connection"] = $conn;
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
   $path = "Pictures/" . $username . "/";
-
+$filename= $_FILES["fileToUpload"]['name'];
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
@@ -120,7 +120,7 @@ $_SESSION["connection"] = $conn;
     if (is_dir($path)){
       $target_dir = "Pictures/" . $username . "/" . $_FILES["fileToUpload"] ;
 echo "hello" . $_FILES["fileToUpload"]['name'];
-copy($_FILES["fileToUpload"]['name'], $target_dir);
+copy($filename, $target_dir);
 
   }
 
