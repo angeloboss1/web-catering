@@ -90,7 +90,7 @@
     while($row = $result->fetch_assoc()) {
 
         echo "<div class='col-sm-4 img-portfolio'><h3 align='center'>" . $row['Product_Name'] . "</h3>";
-        echo "<img src='" . $row['Image_path'] . "' width='300px' height='180px'>";
+        echo "<center><img src='" . $row['Image_path'] . "' width='300px' height='180px'></center>";
         echo "<p align='center'>" . $row['Product_Desc'] . "</p></div>";
     }
 } else {
