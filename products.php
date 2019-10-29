@@ -65,7 +65,7 @@
     <div class="row">
 
         <div class="col-lg-12"><br>
-            <h3>Your Inventory</h3>
+            <h3 align="center">Our Meny</h3>
 
         </div>
     </div>
