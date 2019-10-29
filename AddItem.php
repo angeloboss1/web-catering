@@ -109,7 +109,7 @@ $_SESSION["connection"] = $conn;
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
   $path = "Pictures/" . $username . "/";
-$filename= $_FILES["fileToUpload"]['name'];
+$filename= $_FILES["fileToUpload"]['tmp_name'];
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
