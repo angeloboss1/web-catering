@@ -90,9 +90,9 @@ $username = $_SESSION["username"] ;
 <?php
     while($row = $result->fetch_assoc()) {
 
-        echo "<h2>" . $row['Product_Name'] . "</h3>";
-        echo "<img src='" . $row['Image_path'] . "'>";
-        echo "<p>" . $row['Product_Desc'] . "</p>";
+        echo "<h2 aligh='center'>" . $row['Product_Name'] . "</h3>";
+        echo "<img src='" . $row['Image_path'] . "' width='200px' height='100'>";
+        echo "<p aligh='center'>" . $row['Product_Desc'] . "</p>";
     }
 } else {
     echo "0 results";
