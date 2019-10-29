@@ -90,8 +90,8 @@ $username = $_SESSION["username"] ;
 <?php
     while($row = $result->fetch_assoc()) {
 
-        echo "<h2 aligh='center'>" . $row['Product_Name'] . "</h3>";
-        echo "<img src='" . $row['Image_path'] . "' width='200px' height='100'>";
+        echo "<h3 aligh='center'>" . $row['Product_Name'] . "</h3>";
+        echo "<img src='" . $row['Image_path'] . "' width='300px' height='180px'>";
         echo "<p aligh='center'>" . $row['Product_Desc'] . "</p>";
     }
 } else {
@@ -103,7 +103,7 @@ $username = $_SESSION["username"] ;
 </table>
 
 		</div>
-	</div><br><br><center><img src="/image/inventory.png" style="width: 40%;" ></center>
+	</div>
 </div>
 </div>
 </div>
