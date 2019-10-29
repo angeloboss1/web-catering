@@ -32,18 +32,6 @@ $username = $_SESSION["username"];
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
                 <a href="userhome.php" class="nav-item nav-link active">Home</a>
-                <div class="nav-item dropdown">
-		<a href="yourinventory.php" data-toggle="dropdown" class="nav-link dropdown-toggle" >Your Inventory</a>
-		<div class="dropdown-menu bg-dark">
-			<a class="dropdown-item" href="yourinventory.php" style="color:gray;">All Inventory</a>
-			<a class="dropdown-item" href="outofstock.php" style="color:gray;">Out of Stock</a>
-			<a class="dropdown-item" href="lowstock.php" style="color:gray;">Low Stock</a>
-
-		</div>
-		</div>
-
-
-
                 <a href="AddItem.php" class="nav-item nav-link">Add Item</a>
                 <a href="Search.php" class="nav-item nav-link">Search Item</a>
             </div>
