@@ -64,7 +64,7 @@ $_SESSION["connection"] = $conn;
         <div id="container" class="container">
             <div class="row">
                 <div class="col-sm-6 offset-sm-3 text-center">
-                    <h1 class="display-4">Add a new Item in your Inventory</h1><br><br>
+                    <h1 class="display-4">Add a new Item in the Menu</h1><br><br>
                     <div class="form-group">
                         <form action="AddItem.php" method="POST" style=" text-align: center;"  enctype="multipart/form-data">
                             <div class="form-group">
