@@ -112,7 +112,7 @@ $_SESSION["connection"] = $conn;
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
-	$sql= "INSERT INTO catalogue (id_product, Product_name, Product_desc, Quantity) VALUES ('$sku','$productname','$productdesc','$quantity')";
+
 	if($sku===''){
 	}
 	else{
@@ -155,6 +155,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        $imagepath="Pictures/" . $username . "/" . $_FILES["fileToUpload"]["name"];
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
@@ -167,7 +168,7 @@ if ($uploadOk == 0) {
     mkdir($path);
     echo "NO" . $_FILES["file"]['tmp_name'];
   }
-
+$sql= "INSERT INTO catalogue (id_product, Product_name, Product_desc, Quantity,Image_path) VALUES ('$sku','$productname','$productdesc','$quantity',$imagepath)";
 	if ($conn->query($sql) === TRUE) {
 	echo "<div class='alert alert-success' role='alert'>You item is now added to the inventory.</div>";
 
