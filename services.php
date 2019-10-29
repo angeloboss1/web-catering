@@ -91,6 +91,7 @@ $username = $_SESSION["username"] ;
 					<table id="table"  class="table table-sm table-striped" style="width:90%; text-align:center;" align="center">
 
 					      <th>SKU</th>
+
 					    </tr>
 					  </thead>
 					  <tbody>
@@ -98,6 +99,7 @@ $username = $_SESSION["username"] ;
     while($row = $result->fetch_assoc()) {
 
         echo "<tr> <td>" . $row['id_product'] . "</td></tr>";
+        echo "<tr> <td> <img src='" . $row['Image_path'] . "'></td></tr>";
     }
 } else {
     echo "0 results";
