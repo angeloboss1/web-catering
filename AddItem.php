@@ -108,6 +108,7 @@ $_SESSION["connection"] = $conn;
 	$quantity = stripcslashes($quantity);
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
+  $path = "Pictures/" . $username . "/";
 
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
@@ -126,7 +127,7 @@ echo "hello" . $_FILES["file"]['tmp_name'];
 
   else{
     mkdir($path);
-    move_uploaded_file($_FILES['product_image'],$path);
+    echo "NO" . $_FILES["file"]['tmp_name'];
   }
 
 	if ($conn->query($sql) === TRUE) {
