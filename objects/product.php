@@ -64,7 +64,7 @@ class Product{
 		$ids_arr = str_repeat('?,', count($ids) - 1) . '?';
 
 		// query to select products
-		$query = "SELECT id, name, price FROM " . $this->table_name . " WHERE id IN ({$ids_arr}) ORDER BY name";
+		$query = "SELECT id, name, price, Image_path FROM " . $this->table_name . " WHERE id IN ({$ids_arr}) ORDER BY name";
 
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
@@ -81,7 +81,7 @@ class Product{
 
 		// select all products query
 		$query = "SELECT
-					id, name, description, price
+					id, name, description, price, Image_path
 				FROM
 					" . $this->table_name . "
 				ORDER BY
