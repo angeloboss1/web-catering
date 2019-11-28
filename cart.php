@@ -59,8 +59,8 @@ if(count($_SESSION['cart'])>0){
 		$sub_total=$price*$quantity;
 
 		// =================
-		echo "<div class='cart-row'>";
-			echo "<div class='col-md-8'>";
+		echo "<div class='row'>";
+			echo "<div class='col-xl-8 offset-xl-2 py-5'>";
 
 				echo "<div class='product-name m-b-10px'><h4>{$name}</h4></div>";
 
