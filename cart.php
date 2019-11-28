@@ -62,7 +62,7 @@ if(count($_SESSION['cart'])>0){
 		echo "<div class='row'>";
 			echo "<div class='col-md-6'>";
 
-				echo "<div class='form-group'><h4>{$name}</h4></div>";
+				echo "<div ><h4>{$name}</h4></div>";
 
 				// update quantity
 				echo "<form class='form-group'>";
