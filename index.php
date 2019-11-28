@@ -26,20 +26,20 @@
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 
 		<ul class="nav navbar navbar-expand-md navbar-dark bg-dark ml-auto">
-
+      <li <?php session_start();
+      echo $page_title=="Cart" ? "class='active'" : ""; ?> >
+        <a href="cart.php">
+          <?php
+          // count products in cart
+          $cart_count=count($_SESSION['cart']);
+          ?>
+          Cart <span class="badge" id="comparison-count"><?php echo $cart_count; ?></span>
+        </a>
+      </li>
 			<li class="nav-item dropdown">
 				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#" style="color: grey;"><i class="fa fa-user-o" ></i> Login</a>
 				<ul class="dropdown-menu">
-          <li <?php session_start();
-          echo $page_title=="Cart" ? "class='active'" : ""; ?> >
-  					<a href="cart.php">
-  						<?php
-  						// count products in cart
-  						$cart_count=count($_SESSION['cart']);
-  						?>
-  						Cart <span class="badge" id="comparison-count"><?php echo $cart_count; ?></span>
-  					</a>
-  				</li>
+
 					<li>
                         <form class="form-inline login-form" action="login.php" method="POST">
                             <div class="input-group">
