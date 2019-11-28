@@ -9,8 +9,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 	// creating box
 	echo "<div class='col-md-4 m-b-20px'>";
 
-		// product id for javascript access
-		echo "<div class='product-id display-none'>{$id}</div>";
+
+
 
 		echo "<a href='product.php?id={$id}' class='product-link'>";
 			// select and show first product image
