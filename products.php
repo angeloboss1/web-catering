@@ -30,7 +30,7 @@ $page_title="Products";
 
 // page header html
 include 'layout_head.php';
-
+echo "<h2 align='center' class='col-xl-8 offset-xl-2 py-5'>Our Menu</h2>";
 echo "<div class='col-md-12'>";
 	if($action=='added'){
 		echo "<div class='alert alert-info'>";
@@ -57,8 +57,7 @@ if($num>0){
 	$page_url="products.php?";
 	$total_rows=$product->count();
 
-	echo "<div><h2 align='center' class='col-xl-8 offset-xl-2 py-5'>Our Menu</h2></div>";
- echo "<p class='lead'></p>";
+
 	// show products
 	include_once "read_products_template.php";
 }
