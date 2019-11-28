@@ -57,9 +57,10 @@
 				</ul>
 
 			</li>
-			<li class="nav-item">
-			<a href="register.php" style="color: grey;"><i class="fa fa-user-o"></i> Register</a>
-			</li>
+
+			<!–– <li class="nav-item">
+			//<a href="register.php" style="color: grey;"><i class="fa fa-user-o"></i> Register</a>
+			</li>––>
 		</ul>
 	</div>
         </div>
