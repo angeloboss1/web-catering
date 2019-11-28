@@ -37,7 +37,7 @@
 
 	</li>
 	<?php session_start();?>
-	<li class='nav-item nav-link' >
+	<li class='nav-item' >
 		<a href="cart.php">
 			<?php
 			// count products in cart
