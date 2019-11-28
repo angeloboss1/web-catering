@@ -39,7 +39,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 			}else{
 				echo "<a href='add_to_cart.php?id={$id}&page={$page}' class='btn btn-primary w-100-pct'>Add to Cart</a>";
 			}
-		echo "</div><br />";
+		echo "</div><br /><br />";
 
 	echo "</div>";
 }
