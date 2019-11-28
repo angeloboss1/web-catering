@@ -3,9 +3,9 @@
 class Database{
 
 	// specify your own database credentials
-	private $host = "localhost";
-	private $db_name = "catering_admin";
-	private $username = "catering_logins";
+	private $host = "localhost:3306";
+	private $db_name = "catering_logins";
+	private $username = "catering_admin";
 	private $password = "Drew2019@";
 	public $conn;
 
