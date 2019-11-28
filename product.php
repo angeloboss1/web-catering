@@ -10,7 +10,7 @@ include_once "objects/product_image.php";
 // get database connection
 $database = new Database();
 $db = $database->getConnection();
-echo "ciao";
+
 // initialize objects
 $product = new Product($db);
 $product_image = new ProductImage($db);
