@@ -37,7 +37,7 @@
 
 	</li>
 	<li <?php session_start();
-	echo $page_title=="Cart" ? "class='active'" : ""; ?> >
+	echo $page_title=="Cart" ? "class='nav-item nav-link'" : ""; ?> >
 		<a href="cart.php">
 			<?php
 			// count products in cart
