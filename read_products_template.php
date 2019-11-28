@@ -26,6 +26,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 			// product name
 			echo "<img src='{$Image_path}' width='300px' />";
 			echo "<div class='product-name m-b-10px'>{$name}</div>";
+			echo "<div class='product-detail'>Price:</div>";
+			echo "<h4 class='m-b-10px price-description'>&#36;" . number_format($product->price, 2, '.', ',') . "</h4>";
 			echo "<div class='product-name m-b-10px'>{$price}</div>";
 		echo "</a>";
 
