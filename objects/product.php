@@ -11,6 +11,7 @@ class Product{
 	public $name;
 	public $price;
 	public $description;
+	public $Image_path;
 	public $category_id;
 	public $category_name;
 	public $timestamp;
@@ -25,7 +26,7 @@ class Product{
 
 		// query to select single record
 		$query = "SELECT
-					name, description, price
+					name, description, price,Image_path
 				FROM
 					" . $this->table_name . "
 				WHERE
@@ -52,6 +53,8 @@ class Product{
 		$this->name = $row['name'];
 		$this->description = $row['description'];
 		$this->price = $row['price'];
+		$this->Image_path = $row['Image_path'];
+
 	}
 
 	// read all product based on product ids included in the $ids variable
@@ -78,7 +81,7 @@ class Product{
 
 		// select all products query
 		$query = "SELECT
-					id, name, description, price 
+					id, name, description, price
 				FROM
 					" . $this->table_name . "
 				ORDER BY
