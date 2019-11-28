@@ -57,8 +57,8 @@ if($num>0){
 	$page_url="products.php?";
 	$total_rows=$product->count();
 
-	echo "<h2 align='center'>Our Menu</h2>";
-	echo "";
+	echo "<div><h2 align='center'>Our Menu</h2></div>";
+
 	// show products
 	include_once "read_products_template.php";
 }
