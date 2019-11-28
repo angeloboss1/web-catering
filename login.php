@@ -10,7 +10,7 @@ $username = stripcslashes($username);
 $password = stripcslashes($password);
 
 
-$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
+$conn = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_logins");
 $_SESSION["connection"] = $conn;
 $_SESSION["username"] = $username;
 if ($conn->connect_error) {
