@@ -30,7 +30,8 @@
 			<li class="nav-item dropdown">
 				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#" style="color: grey;"><i class="fa fa-user-o" ></i> Login</a>
 				<ul class="dropdown-menu">
-          <li <?php echo $page_title=="Cart" ? "class='active'" : ""; ?> >
+          <li <?php session_start();
+          echo $page_title=="Cart" ? "class='active'" : ""; ?> >
   					<a href="cart.php">
   						<?php
   						// count products in cart
