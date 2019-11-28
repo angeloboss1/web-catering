@@ -60,7 +60,7 @@ if(count($_SESSION['cart'])>0){
 
 		// =================
 		echo "<div class='row'>";
-			echo "<div class='col-xl-8 offset-xl-2 py-5'>";
+			echo "<div class='col-md-6'>";
 
 				echo "<div class='product-name m-b-10px'><h4>{$name}</h4></div>";
 
