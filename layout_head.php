@@ -16,3 +16,6 @@ $_SESSION['cart']=isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
 <body style="height:100%;">
 
 	<?php include 'navigation.php'; ?>
+
+	<div class="container">
+		<div class="row">

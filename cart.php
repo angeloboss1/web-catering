@@ -25,11 +25,7 @@ include 'layout_head.php';
 
 $action = isset($_GET['action']) ? $_GET['action'] : "";
 
-echo "<div class="container">
-
-		<div class="row">
-
-				<div class="col-xl-8 offset-xl-2 py-5">";
+echo "<div class='col-xl-8 offset-xl-2 py-5'>";
 	if($action=='removed'){
 		echo "<div class='alert alert-info'>";
 			echo "Product was removed from your cart!";
