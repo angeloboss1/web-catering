@@ -19,11 +19,12 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 
 			while ($row_product_image = $stmt_product_image->fetch(PDO::FETCH_ASSOC)){
 				echo "<div class='m-b-10px'>";
-					echo "<img src='uploads/images/{$row_product_image['name']}' class='w-100-pct' />";
+
 				echo "</div>";
 			}
 
 			// product name
+			echo "<img src='{$Image_path}' class='w-100-pct' />";
 			echo "<div class='product-name m-b-10px'>{$name}</div>";
 			echo "<div class='product-name m-b-10px'>{$price}</div>";
 		echo "</a>";
