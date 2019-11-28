@@ -33,11 +33,11 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 		// add to cart button
 		echo "<div class='m-b-10px'>";
 			if(array_key_exists($id, $_SESSION['cart'])){
-				echo "<a href='cart.php' class='btn btn-success w-100-pct'>";
+				echo "<a href='cart.php' class='btn btn-primary bg-dark'>";
 					echo "Update Cart";
 				echo "</a>";
 			}else{
-				echo "<a href='add_to_cart.php?id={$id}&page={$page}' class='btn btn-primary w-100-pct'>Add to Cart</a>";
+				echo "<a href='add_to_cart.php?id={$id}&page={$page}' class='btn btn-primary bg-dark'>Add to Cart</a>";
 			}
 		echo "</div><br /><br />";
 
