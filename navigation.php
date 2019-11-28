@@ -38,7 +38,7 @@
 	</li>
 	<?php session_start();?>
 	<li class='nav-item' >
-		<a href="cart.php">
+		<a href="cart.php" style="text-decoration:none;">
 			<?php
 			// count products in cart
 			$cart_count=count($_SESSION['cart']);
