@@ -25,7 +25,6 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 
 			// product name
 			echo "<img src='{$Image_path}' class='w-100-pct' />";
-			echo "<div class='product-name m-b-10px'>{$Image_path}</div>";
 			echo "<div class='product-name m-b-10px'>{$name}</div>";
 			echo "<div class='product-name m-b-10px'>{$price}</div>";
 		echo "</a>";
