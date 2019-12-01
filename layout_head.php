@@ -12,6 +12,11 @@ $_SESSION['cart']=isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="libs/css/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="libs/css/user.css" rel="stylesheet" media="screen">
 </head>
 <body style="height:100%;">
 
