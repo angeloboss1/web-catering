@@ -89,9 +89,6 @@ echo "<div class='col-md-5'>";
 		echo $page_description;
 	echo "</div>";
 
-	echo "<div class='product-detail'>Product category:</div>";
-	echo "<div class='m-b-10px'>{$product->category_name}</div>";
-
 echo "</div>";
 
 echo "<div class='col-md-2'>";
