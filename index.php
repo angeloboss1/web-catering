@@ -1,4 +1,6 @@
 <?php include 'layout_head.php';?>
+</div>
+</div>
 <div class="view" class="cover-container " align="center" style="background-image: url('Pictures/banner-1.jpg'); background-repeat: no-repeat; background-size: 100%; background-position: center center;  color:white; box-shadow:inset 0 0 0 200px rgba(0,0,0,0.6);" >
 <main role="main" class="inner cover" >
 <br><br><br><br><br><br>
