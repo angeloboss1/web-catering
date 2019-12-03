@@ -45,6 +45,7 @@ $(function () {
                 <a href="userhome.php" class="nav-item nav-link">Home</a>
                 <a href="AddItem.php" class="nav-item nav-link">Add Item</a>
                 <a href="Search.php" class="nav-item nav-link active">Search Item</a>
+                <a href="register.php" class="nav-item nav-link">Register a new Admin User</a>
             </div>
            <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 
