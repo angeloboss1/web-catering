@@ -12,9 +12,6 @@ class Product{
 	public $price;
 	public $description;
 	public $Image_path;
-	public $category_id;
-	public $category_name;
-	public $timestamp;
 
 	// constructor
 	public function __construct($db){
@@ -84,8 +81,6 @@ class Product{
 					id, name, description, price, Image_path
 				FROM
 					" . $this->table_name . "
-				ORDER BY
-					created DESC
 				LIMIT
 					?, ?";
 

@@ -91,11 +91,11 @@ session_start();
 
 	$sku = $_POST["sku"];
 	$username = $_SESSION["username"] ;
-$conn1 = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
+$conn1 = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_logins");
 	if ($conn1->connect_error) {
 	die("Connection failed: " . $conn1->connect_error);
 	}
-	$query= "DELETE FROM catalogue WHERE id_product = '$sku'";
+	$query= "DELETE FROM products WHERE id = '$sku'";
 	if($sku===NULL){
 
 	}
@@ -116,13 +116,13 @@ $conn1 = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins
 
 
             <?php
-						$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
+						$conn = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_logins");
 	$_SESSION["connection"] = $conn;
 
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
-	$sql= "SELECT id_product, Product_name, Product_desc, Quantity FROM catalogue";
+	$sql= "SELECT id, name, description, price FROM products";
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 	?>
@@ -134,14 +134,14 @@ $conn1 = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins
 					      <th>Product Id</th>
 					      <th>Product Name</th>
 					      <th>Product Description</th>
-					      <th>Quantity</th>
+					      <th>Price</th>
 					    </tr>
 					  </thead>
 					  <tbody>
 <?php
     while($row = $result->fetch_assoc()) {
 
-        echo "<tr> <td>" . $row["id_product"] . "</td><td>". $row["Product_name"]."</td>" . "<td>" . $row["Product_desc"] . "</td>" . "<td>" . $row["Quantity"] . "</td></tr>";
+        echo "<tr> <td>" . $row["id"] . "</td><td>". $row["name"]."</td>" . "<td>" . $row["description"] . "</td>" . "<td>" . $row["price"] . "</td></tr>";
     }
 } else {
     echo "0 results";
