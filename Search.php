@@ -141,7 +141,7 @@ $conn1 = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_login
 <?php
     while($row = $result->fetch_assoc()) {
 
-        echo "<tr> <td>" . $row["id_product"] . "</td><td>". $row["Product_name"]."</td>" . "<td>" . $row["Product_desc"] . "</td>" . "<td>" . $row["Quantity"] . "</td></tr>";
+        echo "<tr> <td>" . $row["id"] . "</td><td>". $row["name"]."</td>" . "<td>" . $row["description"] . "</td>" . "<td>" . $row["price"] . "</td></tr>";
     }
 } else {
     echo "0 results";
