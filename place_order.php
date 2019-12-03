@@ -2,6 +2,7 @@
 // start session
 session_start();
 // connect to database
+session_destroy();
 include 'config/database.php';
 
 // include objects
@@ -33,7 +34,7 @@ echo "<div class='col-md-12'>";
 
 echo "</div>";
 
-session_destroy();
+
 // include page footer HTML
 include_once 'layout_foot.php';
 ?>
