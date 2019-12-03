@@ -59,14 +59,14 @@ $_SESSION["connection"] = $conn;
                     <div class="form-group">
                         <form action="AddItem.php" method="POST" style=" text-align: center;"  enctype="multipart/form-data">
                             <div class="form-group">
-                          	<label>SKU</label><br>
+                          	<label>Product Id</label><br>
     				<input type="text" id="sku" name="sku" class="form-control" placeholder="EX: 123" required><br>
     				<label>Product Name</label><br>
     				<input type="text" placeholder="Product Name" class="form-control" name="ProductName" required><br>
     				<label>Product Description</label><br>
       				<textarea type="text" placeholder="Product Description" class="form-control" name="ProductDesc" required></textarea><br>
-      				<label>Quantity</label><br>
-      				<input type="number" placeholder="Quantity"  class="form-control" name="Quantity" required><br>
+      				<label>Price</label><br>
+      				<input type="number" placeholder="Price"  class="form-control" name="Price" required><br>
       				<label>Product Image</label><br>
               <input type="file" name="fileToUpload" id="fileToUpload">
       				<br><br><br>
@@ -89,9 +89,8 @@ $_SESSION["connection"] = $conn;
 	$sku = $_POST['sku'];
 	$productname = $_POST['ProductName'];
 	$productdesc = $_POST['ProductDesc'];
-	$quantity = $_POST['Quantity'];
+	$quantity = $_POST['Price'];
 	$username = $_SESSION["username"] ;
-	$lowstockquantity = $_POST["LowstockQuantity"] ;
 
 	$sku = stripcslashes($sku);
 	$productname = stripcslashes($productname);
@@ -99,7 +98,7 @@ $_SESSION["connection"] = $conn;
 	$quantity = stripcslashes($quantity);
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_logins");
-  $path = "Pictures/" . $username . "/";
+  $path = "Pictures/";
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
@@ -159,7 +158,7 @@ if ($uploadOk == 0) {
     mkdir($path);
     echo "NO" . $_FILES["file"]['tmp_name'];
   }
-$sql= "INSERT INTO catalogue (id_product, Product_name, Product_desc, Quantity, Image_path) VALUES ('$sku','$productname','$productdesc','$quantity','$imagepath')";
+$sql= "INSERT INTO catalogue (id, name, description, price, Image_path) VALUES ('$sku','$productname','$productdesc','$price','$imagepath')";
 	if ($conn->query($sql) === TRUE and $imagepath <> '') {
 	echo "<div class='alert alert-success' role='alert'>You item is now added to the inventory.</div>";
 
