@@ -99,8 +99,8 @@ echo "<form id='contact-form' method='POST' action='place_order.php' role='form'
 			echo "<h4>&#36;" . number_format($total, 2, '.', ',') . "</h4>";
 			echo "<input type='submit' class='btn btn-lg btn-success m-b-10px' value='Place Order'>";
 	        //echo "<a href='place_order.php' class='btn btn-lg btn-success m-b-10px'>";
-	        	
-	        echo "</a>";
+
+	        
 		echo "</div>";
 	echo "</div>";
 
