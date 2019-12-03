@@ -81,8 +81,6 @@ class Product{
 					id, name, description, price, Image_path
 				FROM
 					" . $this->table_name . "
-				ORDER BY
-					created DESC
 				LIMIT
 					?, ?";
 
