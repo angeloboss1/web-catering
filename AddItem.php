@@ -89,13 +89,13 @@ $_SESSION["connection"] = $conn;
 	$sku = $_POST['sku'];
 	$productname = $_POST['ProductName'];
 	$productdesc = $_POST['ProductDesc'];
-	$quantity = $_POST['Price'];
+	$price = $_POST['Price'];
 	$username = $_SESSION["username"] ;
 
 	$sku = stripcslashes($sku);
 	$productname = stripcslashes($productname);
 	$productdesc = stripcslashes($productdesc);
-	$quantity = stripcslashes($quantity);
+	$price = stripcslashes($quantity);
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_logins");
   $path = "Pictures/";
