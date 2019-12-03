@@ -40,8 +40,7 @@ if(count($_SESSION['cart'])>0){
 							echo "<div class='help-block with-errors'></div>";
 					echo "</div>";
 			echo "</div>";
-	echo "</div>";
-	echo "<div class='row'>";
+
 			echo "<div class='col-md-6'>";
 					echo "<div class='form-group'>";
 							echo "<label for='form_email'>Email *</label>";
