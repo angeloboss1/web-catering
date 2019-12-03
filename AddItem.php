@@ -95,7 +95,7 @@ $_SESSION["connection"] = $conn;
 	$sku = stripcslashes($sku);
 	$productname = stripcslashes($productname);
 	$productdesc = stripcslashes($productdesc);
-	$price = stripcslashes($quantity);
+	$price = stripcslashes($price);
 
 	$conn = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_logins");
   $path = "Pictures/";
@@ -159,7 +159,7 @@ if ($uploadOk == 0) {
     echo "NO" . $_FILES["file"]['tmp_name'];
   }
 $sql= "INSERT INTO products (id, name, description, price, Image_path) VALUES ('$sku','$productname','$productdesc','$price','$imagepath')";
-	if ($conn->query($sql) === TRUE and $imagepath <> '') {
+if ($conn->query($sql) === TRUE ) {
 	echo "<div class='alert alert-success' role='alert'>You item is now added to the inventory.</div>";
 
 	}
