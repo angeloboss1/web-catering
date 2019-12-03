@@ -98,7 +98,7 @@ $_SESSION["connection"] = $conn;
 	$productdesc = stripcslashes($productdesc);
 	$quantity = stripcslashes($quantity);
 
-	$conn = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
+	$conn = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_logins");
   $path = "Pictures/" . $username . "/";
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);

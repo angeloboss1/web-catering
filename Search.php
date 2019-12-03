@@ -91,7 +91,7 @@ session_start();
 
 	$sku = $_POST["sku"];
 	$username = $_SESSION["username"] ;
-$conn1 = new mysqli("localhost", "catering_admin", "Drew2019@", "catering_logins");
+$conn1 = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_logins");
 	if ($conn1->connect_error) {
 	die("Connection failed: " . $conn1->connect_error);
 	}
