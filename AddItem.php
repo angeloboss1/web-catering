@@ -80,10 +80,6 @@ $_SESSION["connection"] = $conn;
             </div>
         </div>
     </div>
-
-
-
-
 <?php
 	session_start();
 	$sku = $_POST['sku'];
@@ -153,10 +149,9 @@ if ($uploadOk == 0) {
 
   }
 
-
-  else{
+else{
     mkdir($path);
-    echo "NO" . $_FILES["file"]['tmp_name'];
+    echo "I am sorry. An error stop the process." . $_FILES["file"]['tmp_name'];
   }
 $sql= "INSERT INTO products (id, name, description, price, Image_path) VALUES ('$sku','$productname','$productdesc','$price','$imagepath')";
 if ($conn->query($sql) === TRUE ) {

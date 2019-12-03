@@ -13,6 +13,10 @@
 
   </main>
  </div>
+ <div class="view" class="cover-container " align="center" >
+
+  </div>
+
 
  <footer class="page-footer font-small bg-dark pt-4" style="position:absolute;bottom: 0; width: 100%; text-align: center;">
   <!-- Copyright -->

@@ -62,7 +62,8 @@ $username = $_SESSION["username"];
 </div>
 
 <div class="container-fluid bg-3 text-center">
-  <h1>Welcome to SDA Catering  </h1><br><br>
+  <h1>Welcome to SDA Catering</h1><br>
+  <h3>Admin Page</h3>
   <div class="row">
     <div class="col-sm-4" >
 </div>
