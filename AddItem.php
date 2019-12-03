@@ -145,7 +145,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-        $imagepath="Pictures/" . $username . "/" . $_FILES["fileToUpload"]["name"];
+        $imagepath="Pictures/" . $_FILES["fileToUpload"]["name"];
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
