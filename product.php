@@ -41,7 +41,7 @@ $num_product_image = $stmt_product_image->rowCount();
 
 
 echo "<div class='col-md-4' id='product-img'>";
-      $pic_name = $product->Image_path
+      $pic_name = $product->Image_path;
 			$source="Pictures/{$pic_name}";
 			$show_product_img=$x==0 ? "display-block" : "display-none";
 
