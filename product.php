@@ -45,8 +45,8 @@ echo "<div class='col-md-1'>";
 		// loop through all product images
 		while ($row = $stmt_product_image->fetch(PDO::FETCH_ASSOC)){
 			// image name and source url
-			$product_image_name = $row['name'];
-			$source="uploads/images/{$product_image_name}";
+			$product_image_name = $row['Image_path'];
+			$source="Pictures/{$product_image_name}";
 			echo "<img src='{$source}' class='product-img-thumb' data-img-id='{$row['id']}' />";
 		}
 	}else{ echo "No images."; }
