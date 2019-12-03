@@ -54,7 +54,7 @@ echo "</div>";
 echo "<div class='col-md-4' id='product-img'>";
 
 	// read all related product image
-	$stmt_product_image = $product_image->readByProductId();
+	$stmt_product_image = $product->readOne();
 	$num_product_image = $stmt_product_image->rowCount();
 
 	// if count is more than zero
