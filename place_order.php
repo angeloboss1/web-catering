@@ -86,7 +86,7 @@ EOD;
 		$lastname = $_POST['surname'];
 		$email = $_POST['email'];
 
-$subject = "Your Order from SDA Catering"
+$subject = "Your Order from SDA Catering";
 
 
 		if(mail($email,$subject,$message)) {
