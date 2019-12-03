@@ -71,7 +71,7 @@ echo "<form id='contact-form' method='POST' action='place_order.php' role='form'
 
 		// =================
 		echo "<div class='cart-row'>";
-			echo "<div class='col-md-8'>";
+			echo "<div class='col-md-6'>";
 
 				echo "<div class='product-name m-b-10px'><h4>{$name}</h4></div>";
                 echo $quantity>1 ? "<div>{$quantity} items</div>" : "<div>{$quantity} item</div>";
@@ -102,6 +102,7 @@ echo "<form id='contact-form' method='POST' action='place_order.php' role='form'
 
 				echo "</form>";
 		echo "</div>";
+	echo "</div>";
 	echo "</div>";
 
 }
