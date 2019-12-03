@@ -5,6 +5,7 @@ session_start();
 // include classes
 include_once "config/database.php";
 include_once "objects/product.php";
+include_once "objects/product_image.php";
 
 // get database connection
 $database = new Database();
@@ -12,7 +13,7 @@ $db = $database->getConnection();
 
 // initialize objects
 $product = new Product($db);
-
+$product_image = new ProductImage($db);
 
 // get ID of the product to be edited
 $id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: missing ID.');
@@ -30,10 +31,10 @@ $page_title = $product->name;
 include_once 'layout_head.php';
 
 // set product id
-$product->id=$id;
+$product_image->product_id=$id;
 
 // read all related product image
-$stmt_product_image = $product->readOne();
+$stmt_product_image = $product_image->readByProductId();
 
 // count all relatd product image
 $num_product_image = $stmt_product_image->rowCount();
@@ -54,7 +55,7 @@ echo "</div>";
 echo "<div class='col-md-4' id='product-img'>";
 
 	// read all related product image
-	$stmt_product_image = $product->readOne();
+	$stmt_product_image = $product_image->readByProductId();
 	$num_product_image = $stmt_product_image->rowCount();
 
 	// if count is more than zero
