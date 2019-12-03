@@ -100,9 +100,9 @@ echo "<form id='contact-form' method='POST' action='place_order.php' role='form'
 			echo "<input type='submit' class='btn btn-lg btn-success m-b-10px' value='Place Order'>";
 	        //echo "<a href='place_order.php' class='btn btn-lg btn-success m-b-10px'>";
 
-	        
+
 		echo "</div>";
-	echo "</div>";
+	//echo "</div>";
 
 }
 
