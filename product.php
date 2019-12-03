@@ -41,10 +41,10 @@ $num_product_image = $stmt_product_image->rowCount();
 
 
 echo "<div class='col-md-4' id='product-img'>";
-
-			$source="Pictures/$product->Image_path";
+      $pic_name = $product->Image_path
+			$source="Pictures/{$pic_name}";
 			$show_product_img=$x==0 ? "display-block" : "display-none";
-			echo "<a href='{$source}' target='_blank' id='product-img-{$row['id']}' class='product-img {$show_product_img}'>";
+
 				echo "<img src='{$source}' style='width:100%;' />";
 			echo "</a>";
 
