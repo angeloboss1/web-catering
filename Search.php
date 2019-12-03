@@ -134,7 +134,7 @@ $conn1 = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_login
 					      <th>Product Id</th>
 					      <th>Product Name</th>
 					      <th>Product Description</th>
-					      <th>Quantity</th>
+					      <th>Price</th>
 					    </tr>
 					  </thead>
 					  <tbody>
