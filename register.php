@@ -19,7 +19,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="index.php" class="nav-item nav-link">Home</a>
                 <a href="services.html" class="nav-item nav-link">Products</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
