@@ -158,7 +158,7 @@ if ($uploadOk == 0) {
     mkdir($path);
     echo "NO" . $_FILES["file"]['tmp_name'];
   }
-$sql= "INSERT INTO catalogue (id, name, description, price, Image_path) VALUES ('$sku','$productname','$productdesc','$price','$imagepath')";
+$sql= "INSERT INTO catalogue (id, name, description, price, Image_path,,) VALUES ('$sku','$productname','$productdesc','$price','$imagepath',,)";
 	if ($conn->query($sql) === TRUE and $imagepath <> '') {
 	echo "<div class='alert alert-success' role='alert'>You item is now added to the inventory.</div>";
 
