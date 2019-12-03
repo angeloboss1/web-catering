@@ -95,7 +95,7 @@ $conn1 = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_login
 	if ($conn1->connect_error) {
 	die("Connection failed: " . $conn1->connect_error);
 	}
-	$query= "DELETE FROM catalogue WHERE id_product = '$sku'";
+	$query= "DELETE FROM products WHERE id = '$sku'";
 	if($sku===NULL){
 
 	}
@@ -122,7 +122,7 @@ $conn1 = new mysqli("localhost", "catering_admin", "Drew2019@#", "catering_login
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
-	$sql= "SELECT id_product, Product_name, Product_desc, Quantity FROM catalogue";
+	$sql= "SELECT id, name, description, price FROM products";
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 	?>
